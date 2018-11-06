@@ -13,19 +13,27 @@
     </style>
 </head>
 <body>
-    <h2>Welcome to the future home of Cherry Blossom Development... </h2>
-    <i>yet another bunch of guys trying to make money in software development</i>
-    <span>... messin around</span>
-    <h2> Hello World!</h2>
-    <p>And now for an image:</p>
-    <img src="http://www.everintransit.com/wp-content/uploads/2016/04/cherry-blossoms-tokyo-ueno-park.jpg"/>
-
-    <div class="palette">
-        <span class="light-crimson">Light Crimson</span>
-        <span class="granite-gray">Granite Grey</span>
-        <span class="rackley">Rackley</span>
-        <span class="pistacio">Pistacio</span>
-        <span class="pale-robin-egg-blue">Pale Robin Egg Blue</span>
+    <div id="header">
+        <h2>Cherry Blossom Development</h2>
+    </div>
+    <div id="main-navigation">
+        <ul>
+            <li>Who are we?</li>
+            <li>Mission Statement</li>
+            <li>Projects</li>
+        </ul>
+    </div>
+    <div id="main-content">
+        <img src="http://www.everintransit.com/wp-content/uploads/2016/04/cherry-blossoms-tokyo-ueno-park.jpg"/>
+    </div>
+    <div id="footer">
+        <div class="palette">
+            <span class="light-crimson">Light Crimson</span>
+            <span class="granite-gray">Granite Grey</span>
+            <span class="rackley">Rackley</span>
+            <span class="pistacio">Pistacio</span>
+            <span class="pale-robin-egg-blue">Pale Robin Egg Blue</span>
+        </div>
     </div>
 </body>
 </html>
