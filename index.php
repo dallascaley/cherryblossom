@@ -24,7 +24,8 @@
         </ul>
     </div>
     <div id="main-content">
-        <img src="http://www.everintransit.com/wp-content/uploads/2016/04/cherry-blossoms-tokyo-ueno-park.jpg"/>
+        <div id="like_button_container"></div>
+        <img src="images/cherry-blossoms-tokyo-ueno-park.jpg"/>
     </div>
     <div id="footer">
         <div class="palette">
@@ -35,5 +36,8 @@
             <span class="pale-robin-egg-blue">Pale Robin Egg Blue</span>
         </div>
     </div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="like_button.js"></script>
 </body>
 </html>
