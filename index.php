@@ -36,8 +36,14 @@
             <span class="pale-robin-egg-blue">Pale Robin Egg Blue</span>
         </div>
     </div>
+    <!-- Non prod scripts
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="like_button.js"></script>
+    -->
+    <!-- Prod Scripts -->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="like_button.min.js"></script>
 </body>
 </html>
