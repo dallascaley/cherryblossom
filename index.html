@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cherry Blossom Development</title>
     <meta name="description" content="Cherry Blossom Development - we build stuff">
-    <link rel="icon" type="image/jpeg" href="/cbd-logo.jpg">
+    <link rel="icon" type="image/png" href="/cherry-blossom-logo-03-09-2019.png">
     <style>
         body {
             margin: 0;
@@ -20,23 +20,14 @@
             padding: 40px 20px;
             text-align: center;
         }
-        .brand-bar {
-            max-width: 1000px;
-            margin: 30px auto 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .brand-bar img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
-        .brand-bar span {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #c94f7c;
+        .hero-logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 90px;
+            width: auto;
+            z-index: 1;
         }
         header h1 {
             margin: 0;
@@ -112,16 +103,12 @@
 <body>
 
 <header class="hero">
+    <img class="hero-logo" src="/cherry-blossom-logo-03-09-2019.png" alt="Cherry Blossom Development logo">
     <div class="hero-content">
         <h1>Cherry Blossom Development</h1>
         <p>We make stuff... if we feel like it</p>
     </div>
 </header>
-
-<div class="brand-bar">
-    <img src="/cbd-logo.jpg" alt="Cherry Blossom Development logo">
-    <span>Cherry Blossom Development</span>
-</div>
 
 <section>
     <h2>About Us</h2>

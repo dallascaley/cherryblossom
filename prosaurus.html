@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosaurus &mdash; Cherry Blossom Development</title>
     <meta name="description" content="Prosaurus is a full-stack social productivity platform built by Cherry Blossom Development, featuring web, Android, iOS, and automated testing.">
-    <link rel="icon" type="image/jpeg" href="/cbd-logo.jpg">
+    <link rel="icon" type="image/png" href="/cherry-blossom-logo-03-09-2019.png">
     <style>
         body {
             margin: 0;
@@ -19,6 +19,15 @@
             color: #2b2b2b;
             padding: 40px 20px;
             text-align: center;
+            position: relative;
+        }
+        .hero-logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 90px;
+            width: auto;
         }
         header h1 {
             margin: 0;
@@ -46,27 +55,6 @@
         .hero-bar a {
             color: #f2c1d1;
             text-decoration: none;
-        }
-        .brand-bar {
-            max-width: 1000px;
-            margin: 30px auto 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .brand-bar img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
-        .brand-bar a {
-            font-size: 1rem;
-            color: #c94f7c;
-            text-decoration: none;
-        }
-        .brand-bar a:hover {
-            text-decoration: underline;
         }
         section {
             max-width: 1000px;
@@ -163,15 +151,11 @@
 <body>
 
 <header>
+    <img class="hero-logo" src="/cherry-blossom-logo-03-09-2019.png" alt="Cherry Blossom Development logo">
     <a href="/">&larr; Cherry Blossom Development</a>
     <h1>Prosaurus</h1>
     <p>A full-stack social productivity platform &mdash; web, mobile, and everything in between</p>
 </header>
-
-<div class="brand-bar">
-    <img src="/cbd-logo.jpg" alt="Cherry Blossom Development logo">
-    <a href="/">Cherry Blossom Development</a>
-</div>
 
 <section>
     <div class="intro-block">
