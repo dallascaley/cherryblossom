@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosaurus &mdash; Cherry Blossom Development</title>
+    <meta name="description" content="Prosaurus is a full-stack social productivity platform built by Cherry Blossom Development, featuring web, Android, iOS, and automated testing.">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        header {
+            background: #f2c1d1;
+            color: #2b2b2b;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        header a {
+            color: #c94f7c;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .hero-bar {
+            background: #2b2b2b;
+            color: #f2c1d1;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 1rem;
+        }
+        .hero-bar a {
+            color: #f2c1d1;
+            text-decoration: none;
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            color: #c94f7c;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f2c1d1;
+            padding-bottom: 6px;
+        }
+        h3 {
+            color: #2b2b2b;
+            margin-top: 24px;
+            margin-bottom: 6px;
+        }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .platform-card {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #f2c1d1;
+        }
+        .platform-card h3 {
+            margin-top: 0;
+            color: #c94f7c;
+        }
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+        }
+        .tech-list li {
+            padding: 4px 0;
+            padding-left: 18px;
+            position: relative;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .tech-list li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: #c94f7c;
+            font-weight: bold;
+        }
+        .intro-block {
+            background: #ffffff;
+            padding: 28px 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            margin-bottom: 10px;
+        }
+        .intro-block p {
+            margin: 0 0 12px 0;
+        }
+        .intro-block p:last-child {
+            margin-bottom: 0;
+        }
+        .live-link {
+            display: inline-block;
+            margin-top: 16px;
+            background: #c94f7c;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .live-link:hover {
+            background: #a8365f;
+        }
+        footer {
+            background: #2b2b2b;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #f2c1d1;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">&larr; Cherry Blossom Development</a>
+    <h1>Prosaurus</h1>
+    <p>A full-stack social productivity platform &mdash; web, mobile, and everything in between</p>
+</header>
+
+<section>
+    <div class="intro-block">
+        <p>
+            Prosaurus is an in-house project that serves as both a real-world product and a living demonstration of what Cherry Blossom Development builds. It is a social productivity platform designed for teams and communities &mdash; combining real-time messaging, content sharing, and user management into a single cohesive experience.
+        </p>
+        <p>
+            The project spans every layer of modern software: a cloud-deployed backend, a responsive web client, a native Android app, an iOS app in development, and a fully automated test suite that exercises all of it. Every component is built, deployed, and maintained by the Cherry Blossom Development team.
+        </p>
+        <a href="https://www.prosaurus.com" class="live-link" target="_blank" rel="noopener">Visit Prosaurus &rarr;</a>
+    </div>
+</section>
+
+<section>
+    <h2>Platform Overview</h2>
+    <div class="platform-grid">
+
+        <div class="platform-card">
+            <h3>Web Application</h3>
+            <p>
+                The Prosaurus web app is a single-page application built with Vue 3. It delivers a fully responsive experience in the browser, with real-time updates powered by Socket.IO. Users can manage profiles, participate in group discussions, exchange direct messages, and interact with a customizable dashboard of content widgets.
+            </p>
+            <ul class="tech-list">
+                <li>Vue 3 with Vite</li>
+                <li>Pinia for state management</li>
+                <li>Socket.IO for real-time messaging</li>
+                <li>Deployed as static files via nginx on AWS EC2</li>
+            </ul>
+        </div>
+
+        <div class="platform-card">
+            <h3>Android App</h3>
+            <p>
+                The Android application is built natively in Kotlin using Jetpack Compose for the UI. It connects to the same backend API as the web app, giving users the full Prosaurus experience on their Android devices. Authentication uses encrypted local storage, and all network communication is secured over HTTPS.
+            </p>
+            <ul class="tech-list">
+                <li>Kotlin with Jetpack Compose</li>
+                <li>Retrofit for type-safe API calls</li>
+                <li>Coroutines for async operations</li>
+                <li>EncryptedSharedPreferences for secure token storage</li>
+                <li>Available on Google Play</li>
+            </ul>
+        </div>
+
+        <div class="platform-card">
+            <h3>iOS App</h3>
+            <p>
+                An iOS companion to the Android app is currently in development. It will share the same backend API and feature parity with the Android and web clients, giving Prosaurus users a native experience across all major mobile platforms.
+            </p>
+            <ul class="tech-list">
+                <li>Native Swift development</li>
+                <li>SwiftUI interface</li>
+                <li>Shared backend API with Android and web</li>
+                <li>Coming to the App Store</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Backend &amp; Infrastructure</h2>
+    <p>
+        All three clients are powered by a single backend API built on Node.js and Express, running inside a Docker container on an AWS EC2 instance. A Redis pub/sub adapter enables Socket.IO to broadcast real-time events across multiple server instances, laying the foundation for horizontal scaling. nginx handles SSL termination and routes traffic between the static frontend and the backend container.
+    </p>
+    <h3>Key backend technologies</h3>
+    <ul class="tech-list">
+        <li>Node.js + Express REST API</li>
+        <li>MariaDB for persistent data storage</li>
+        <li>Socket.IO with Redis adapter for real-time communication</li>
+        <li>Docker for containerized backend deployment</li>
+        <li>nginx as reverse proxy with Let&rsquo;s Encrypt SSL</li>
+        <li>AWS EC2 hosting</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Automated Testing</h2>
+    <p>
+        Prosaurus includes a dedicated end-to-end test suite that covers both the web and Android clients. Tests run against an isolated test database with seeded users and known state, so each run is clean and repeatable. The test infrastructure is maintained alongside the product code and is run continuously as new features are developed.
+    </p>
+    <h3>Testing stack</h3>
+    <ul class="tech-list">
+        <li>WebdriverIO as the primary test framework</li>
+        <li>Appium for Android device automation</li>
+        <li>Mocha test runner with structured reporting</li>
+        <li>Isolated <code>breakroom_test</code> database with schema kept in sync from production</li>
+        <li>Page object model for maintainable, reusable selectors</li>
+        <li>Tests cover authentication, navigation, real-time messaging, and user management flows</li>
+    </ul>
+</section>
+
+<footer>
+    <p>
+        &copy; 2026 Cherry Blossom Development LLC<br>
+        <a href="https://cherryblossomdevelopment.com">cherryblossomdevelopment.com</a>
+    </p>
+</footer>
+
+</body>
+</html>
