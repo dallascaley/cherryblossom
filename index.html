@@ -20,13 +20,23 @@
             padding: 40px 20px;
             text-align: center;
         }
-        .hero-content img {
-            width: 80px;
-            height: 80px;
+        .brand-bar {
+            max-width: 1000px;
+            margin: 30px auto 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .brand-bar img {
+            width: 60px;
+            height: 60px;
             object-fit: contain;
-            display: block;
-            margin: 0 auto 12px auto;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+        .brand-bar span {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #c94f7c;
         }
         header h1 {
             margin: 0;
@@ -103,11 +113,15 @@
 
 <header class="hero">
     <div class="hero-content">
-        <img src="/cbd-logo.jpg" alt="Cherry Blossom Development logo">
         <h1>Cherry Blossom Development</h1>
         <p>We make stuff... if we feel like it</p>
     </div>
 </header>
+
+<div class="brand-bar">
+    <img src="/cbd-logo.jpg" alt="Cherry Blossom Development logo">
+    <span>Cherry Blossom Development</span>
+</div>
 
 <section>
     <h2>About Us</h2>
