@@ -160,10 +160,10 @@
 <section>
     <div class="intro-block">
         <p>
-            Prosaurus is an in-house project that serves as both a real-world product and a living demonstration of what Cherry Blossom Development builds. It is a social productivity platform designed for teams and communities &mdash; combining real-time messaging, content sharing, and user management into a single cohesive experience.
+            Prosaurus is an in-house project that serves as both a real-world product and a living demonstration of what Cherry Blossom Development builds. It is a social productivity platform designed for teams, communities and individuals &mdash; combining real-time messaging, content sharing, and user management into a single cohesive experience.
         </p>
         <p>
-            The project spans every layer of modern software: a cloud-deployed backend, a responsive web client, a native Android app, an iOS app in development, and a fully automated test suite that exercises all of it. Every component is built, deployed, and maintained by the Cherry Blossom Development team.
+            The project spans every layer of modern software: a cloud-deployed backend, a responsive web client, a native Android app, and a native iOS app.  A fully automated test suite also validates that all three are in working order. Every component is built, deployed, and maintained by the Cherry Blossom Development team.
         </p>
         <a href="https://www.prosaurus.com" class="live-link" target="_blank" rel="noopener">Visit Prosaurus &rarr;</a>
     </div>
@@ -196,20 +196,20 @@
                 <li>Retrofit for type-safe API calls</li>
                 <li>Coroutines for async operations</li>
                 <li>EncryptedSharedPreferences for secure token storage</li>
-                <li>Available on Google Play</li>
+                <li>Soon to be available on Google Play</li>
             </ul>
         </div>
 
         <div class="platform-card">
             <h3>iOS App</h3>
             <p>
-                An iOS companion to the Android app is currently in development. It will share the same backend API and feature parity with the Android and web clients, giving Prosaurus users a native experience across all major mobile platforms.
+                An iOS companion to the Android app is technically live in the App store right now, however we are still fixing issues. It shares the same backend API and has feature parity with the Android and web clients, giving Prosaurus users a native experience across all major mobile platforms.
             </p>
             <ul class="tech-list">
                 <li>Native Swift development</li>
                 <li>SwiftUI interface</li>
                 <li>Shared backend API with Android and web</li>
-                <li>Coming to the App Store</li>
+                <li>Coming to the App Store soon</li>
             </ul>
         </div>
 
@@ -235,23 +235,61 @@
 <section>
     <h2>Automated Testing</h2>
     <p>
-        Prosaurus includes a dedicated end-to-end test suite that covers both the web and Android clients. Tests run against an isolated test database with seeded users and known state, so each run is clean and repeatable. The test infrastructure is maintained alongside the product code and is run continuously as new features are developed.
+        Prosaurus includes a dedicated end-to-end test suite that covers both the web, Android and iOS clients. Tests run against an isolated test database with seeded users and known state, so each run is clean and repeatable. The test infrastructure is maintained alongside the product code and is run continuously as new features are developed.
     </p>
     <h3>Testing stack</h3>
     <ul class="tech-list">
         <li>WebdriverIO as the primary test framework</li>
-        <li>Appium for Android device automation</li>
+        <li>Appium for Android and iPhone device automation</li>
         <li>Mocha test runner with structured reporting</li>
-        <li>Isolated <code>breakroom_test</code> database with schema kept in sync from production</li>
+        <li>Isolated <code>breakroom_test</code> database with schema syncable to production or development environments</li>
         <li>Page object model for maintainable, reusable selectors</li>
-        <li>Tests cover authentication, navigation, real-time messaging, and user management flows</li>
+        <li>Tests cover authentication, navigation, real-time messaging, and user management flows (at the moment, we are adding more every day)</li>
     </ul>
+</section>
+
+<section>
+    <h2>Development Philosophy</h2>
+    <h3>Why Native Apps?</h3>
+    <p>
+        In the past, we have built apps using various frameworks and we have all had some success with that approach, but also there were drawbacks.  One of the main problems with framework based development is that the framework has to adapt to changes in the native code and that can take time.  By using the native languages of the applications (Kotlin and Swift) we can avoid this problem altogether.
+    </p>
+    <p>
+        The other problem with framework based development is that there is an underlaying assumption that iPhone users are the same as Android users and this is absolutely not the case.  Each set of users expects different things which makes it tough to have one codebase for all. 
+    </p>
+    <h3>Language Choices</h3>
+    <p>
+        Beyond the choices for app development are the decisions for which languages to use for the web application and for the backend itself. As a team, Cherry Blossom Development have used dozens of languages and frameworks over the past 25 years.
+    </p>
+    <p>
+        While we each have our own preferences, I have made the decision to go with Vue.js on the front end and Express.js on the backend for a couple of reasons:
+    </p>
+    <ul class="tech-list">
+        <li>
+            Simplicity - One of the main concerns with all of the frameworks is complexity.  While in many cases the added complexity and abstraction provided in frameworks like Angular and React is good for human development, our theory is that it actually makes automated development more difficult.  Our code is now almost 100% created by agentic coding agents so we need it to be optimized for those tools.  Vue.js is a simpler framework and I have found it to be very efficient to develop using this and the Agent.
+        </li>
+        <li>
+            Back end vs Front End - There are many options out there for each, and there are more and more that integrate both into one (like Next.js which we researched).  At the end of the day, we decided to go with Express.js because again, like Vue.js it's simple.  Also it's old so there is lots of documentation for the robot to consume on how to build it correctly.
+        </li>
+    </ul>
+    <h3>Scalability</h3>
+    <p>
+        At first, we messed around with Docker, Kubernetes and Terraform to make a scalable system.  Eventually we realized that Ansible was also a good tool to have.  At the end of the day however, we determined that most of these things were a pre-optimization.  With no real traffic yet, there was not any good reason to spend the money on all of these tools.
+    </p>
+    <p>
+        Our one exception to that is Docker.  We did build our system within a docker container so that some day if we have to scale it will be easier becasue it will already be containerized.
+    </p>
+    <p>
+        Another thing we added after a bit of messing with it was Redis.  While Redis was not necesarily needed at this early stage, it did help with the development process by allowing us to connect production and test chat together which made it much easier to test in general.
+    </p>
+
 </section>
 
 <footer>
     <p>
         &copy; 2026 Cherry Blossom Development LLC<br>
-        <a href="https://cherryblossomdevelopment.com">cherryblossomdevelopment.com</a>
+        <a href="https://cherryblossomdevelopment.com">cherryblossomdevelopment.com</a><br>
+        <a href="/prosaurus-child-safety">Child Safety Standards</a>
     </p>
 </footer>
 
