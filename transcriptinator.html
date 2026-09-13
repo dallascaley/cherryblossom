@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcriptinator &mdash; Cherry Blossom Development</title>
+    <meta name="description" content="Transcriptinator is an on-device voice transcription app by Cherry Blossom Development. Speak. Get a transcript. Nothing leaves your phone.">
+    <link rel="icon" type="image/png" href="/cherry-blossom-logo-03-09-2019.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        header {
+            background: #f2c1d1;
+            color: #2b2b2b;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero-logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 90px;
+            width: auto;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        header a {
+            color: #c94f7c;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            color: #c94f7c;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f2c1d1;
+            padding-bottom: 6px;
+        }
+        h3 {
+            color: #2b2b2b;
+            margin-top: 24px;
+            margin-bottom: 6px;
+        }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .platform-card {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #f2c1d1;
+        }
+        .platform-card h3 {
+            margin-top: 0;
+            color: #c94f7c;
+        }
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+        }
+        .tech-list li {
+            padding: 4px 0;
+            padding-left: 18px;
+            position: relative;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .tech-list li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: #c94f7c;
+            font-weight: bold;
+        }
+        .intro-block {
+            background: #ffffff;
+            padding: 28px 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            margin-bottom: 10px;
+        }
+        .intro-block p {
+            margin: 0 0 12px 0;
+        }
+        .intro-block p:last-child {
+            margin-bottom: 0;
+        }
+        .live-link {
+            display: inline-block;
+            margin-top: 16px;
+            background: #c94f7c;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .live-link:hover {
+            background: #a8365f;
+        }
+        footer {
+            background: #2b2b2b;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #f2c1d1;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img class="hero-logo" src="/cherry-blossom-logo-03-09-2019.png" alt="Cherry Blossom Development logo">
+    <a href="/">&larr; Cherry Blossom Development</a>
+    <h1>Transcriptinator</h1>
+    <p>Speak. Get a transcript. Nothing leaves your phone.</p>
+</header>
+
+<section>
+    <div class="intro-block">
+        <p>
+            Transcriptinator is an on-device voice note app that turns speech into structured notes. It runs Whisper transcription locally, with no internet connection required, and can learn to recognize individual speakers so recordings come out labeled with who said what.
+        </p>
+        <p>
+            The app also accepts imported audio in common formats (WAV, M4A, MP3, AIFF, ALAC), so existing voice memos and meeting recordings can be transcribed too. Everything happens on the device by default &mdash; there's no account, no tracking, and no subscription required for transcription.
+        </p>
+        <a href="https://transcriptinator.cherryblossomdevelopment.com" class="live-link" target="_blank" rel="noopener">Visit Transcriptinator &rarr;</a>
+    </div>
+</section>
+
+<section>
+    <h2>Platform Availability</h2>
+    <div class="platform-grid">
+
+        <div class="platform-card">
+            <h3>Android</h3>
+            <p>
+                Transcriptinator is available now on Android, distributed through Google Play. It brings the full on-device transcription and speaker recognition experience to Android devices.
+            </p>
+            <ul class="tech-list">
+                <li>Available now on Google Play</li>
+                <li>Fully on-device transcription</li>
+                <li>No account required</li>
+            </ul>
+        </div>
+
+        <div class="platform-card">
+            <h3>iPhone</h3>
+            <p>
+                An iPhone version is in development and coming soon, targeting iOS 15 and newer. It will offer the same local transcription and speaker recognition features as the Android app.
+            </p>
+            <ul class="tech-list">
+                <li>Targeting iOS 15+</li>
+                <li>Coming soon to the App Store</li>
+                <li>Feature parity with Android</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Features</h2>
+    <ul class="tech-list">
+        <li>Local, on-device speech-to-text powered by Whisper &mdash; no internet connection required</li>
+        <li>Speaker recognition through voice enrollment, so transcripts are labeled by speaker</li>
+        <li>Import existing audio files in WAV, M4A, MP3, AIFF, and ALAC formats</li>
+        <li>Three processing tiers &mdash; Fast (200&nbsp;MB), Balanced (600&nbsp;MB), and Accurate (1.4&nbsp;GB) &mdash; to match your device and needs</li>
+        <li>Custom extraction rules written in plain language, for automatic todo and calendar event creation with zero AI required</li>
+        <li>Optional AI enhancement using your own API key from Anthropic, OpenAI, or Google for smarter summaries, classification, and date/assignee extraction</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Privacy</h2>
+    <p>
+        Audio and speaker data stay on your device. Transcription doesn&rsquo;t require an account, tracking, or a subscription. If you choose to turn on optional AI extraction, only the text transcript is sent to the AI provider you&rsquo;ve configured &mdash; never the audio itself.
+    </p>
+</section>
+
+<footer>
+    <p>
+        &copy; 2026 Cherry Blossom Development LLC<br>
+        <a href="https://cherryblossomdevelopment.com">cherryblossomdevelopment.com</a>
+    </p>
+</footer>
+
+</body>
+</html>
